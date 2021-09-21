@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+	margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 4px;
+}
+
+html body {
+    width: 100%;
+}
+
+#nav{
+    height: 54px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+ .nav-list {
+    display: inline-block;
+}
+
+.nav-item{
+    display: inline-block;
+    line-height: 38px;
+    bottom: 0;
+    padding: 0 16px;
+}
+
+.nav-item > a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+.nav-item:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+.slider{
+    display: flex;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50%;
+    background: url('./img/slider1.jpg') top center / contain  no-repeat;
+    max-width: 1600px;
+}
+
+.slider .slider-name{
+    display: block;
+    position: absolute;
+    color: rgb(85, 84, 84);
+    font-weight: 200;
+    font-size: 36px;
+    bottom: 25px;
+    left: 16px;
+}
+
+.content-catering > p{
+    letter-spacing: normal;
+    line-height: 1.5;
+    font-size: 18px;
+    margin: 16px 0;
+}
+
+.content-catering > p:last-child{
+    opacity: 0.7;
+}
+
+.content-catering > h1{
+    letter-spacing: 5px;
+    font-size: 36px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+.content-catering > h5{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 40px 0 20px 0;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#menu .content-catering h5 {
+    text-align: left;
+    font-size: 20px;
+}
+
+#menu .content-catering p {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+#about, #menu{
+    max-width: 1100px;
+    display: flex;
+    padding:64px 12px;
+    margin: auto;
+}
+
+#menu{
+    flex-direction: row-reverse;
+}
+
+#about .content-img, #menu .content-img{
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+    padding: 12px 24px;
+    width: 50%;
+}
+
+#about .content-catering, #menu .content-catering{
+    padding: 12px 24px;
+    width: 50%;
+}
+
+#contact{
+    max-width: 1100px;
+    margin: auto;
+    padding:64px 12px;
+}
+
+#contact > h1{
+    font-weight: 400;
+    font-size: 36px;
+    margin: 24px 0;
+    letter-spacing: 5px;
+    display: block;
+    line-height: 54px;
+}
+
+#contact p {
+    margin: 15px 0;
+    display: inline-block;
+    letter-spacing: normal;
+}
+
+#contact h4{
+    letter-spacing: normal;
+    color: #607d8b;
+    font-size: 18px;
+}
+
+
+.contact--input{
+    display: inline-block;
+    flex: 1;
+    letter-spacing: normal;
+    width: 100%;
+    padding: 16px 8px;
+    border: none;
+    margin: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.send-btn{
+    border: none;
+    padding: 12px 8px;
+    margin-top: 24px;
+    letter-spacing: normal;
+}
+
+.send-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#footer{
+    padding: 30px 0;
+}
+
+#footer p, #footer a{
+    letter-spacing: normal;
+    text-align: center;
+    width: 100%;
+    margin: 16px 0;
+    color: #000;
+}
+
+/* Table */
+
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+    #about img{
+        display: none;
+    }
+
+    #about .content-catering{
+        width: 100%;
+    }
+
+    .send-btn{
+        width: 100%;
+    }
+    
+}
+
+/* Mobile */
+@media only screen and (max-width: 739px){
+    #about, #menu{
+        flex-direction: column-reverse;
+    }
+
+    #about img{
+        display: none;
+    }
+
+    .slider{
+        top: 12px;
+    }
+
+    #menu{
+        /* flex-direction: row; */
+    }
+
+    .nav-list:last-child{
+        display: none;
+    }
+ 
+    #about .content-img, #menu .content-img{
+        width: 100%;
+    }
+    
+    #about .content-catering, #menu .content-catering{
+        width: 100%;
+    }
+
+    .send-btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    .slider{
+        padding-top: 800px;
+    }
+}
